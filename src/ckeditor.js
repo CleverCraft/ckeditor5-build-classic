@@ -78,8 +78,10 @@ ClassicEditor.defaultConfig = {
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
+			'fontColor',
+			'fontBackgroundColor',
 			'undo',
-			'redo'
+			'redo',
 		]
 	},
 	image: {
