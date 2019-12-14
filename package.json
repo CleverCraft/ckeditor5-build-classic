@@ -1,5 +1,5 @@
 {
-  "name": "@clever-craft/ckeditor5",
+  "name": "clever-craft-ckeditor5",
   "version": "16.0.0",
   "description": "Ck5 editor with font plugin",
   "keywords": [],
@@ -47,7 +47,7 @@
     "node": ">=8.0.0",
     "npm": ">=5.7.1"
   },
-  "author": "Vladislav Bondarenko (fork http://cksource.com/)",
+  "author": "hybrid22 (fork http://cksource.com/)",
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build": "webpack --mode production",
