@@ -33,6 +33,8 @@ import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -65,6 +67,8 @@ ClassicEditor.builtinPlugins = [
 	Alignment,
 	Underline,
 	Strikethrough,
+	Subscript,
+	Superscript,
 ];
 
 // Editor configuration.
@@ -77,6 +81,8 @@ ClassicEditor.defaultConfig = {
 			'italic',
 			'underline',
 			'strikethrough',
+			'subscript',
+			'superscript',
 			'link',
 			'bulletedList',
 			'numberedList',
