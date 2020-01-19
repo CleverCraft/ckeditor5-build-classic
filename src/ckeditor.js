@@ -35,6 +35,7 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -69,6 +70,7 @@ ClassicEditor.builtinPlugins = [
 	Strikethrough,
 	Subscript,
 	Superscript,
+	CodeBlock,
 ];
 
 // Editor configuration.
@@ -84,6 +86,7 @@ ClassicEditor.defaultConfig = {
 			'subscript',
 			'superscript',
 			'link',
+			'codeBlock',
 			'bulletedList',
 			'numberedList',
 			'|',
@@ -114,6 +117,16 @@ ClassicEditor.defaultConfig = {
 			'tableColumn',
 			'tableRow',
 			'mergeTableCells'
+		]
+	},
+	codeBlock: {
+		languages: [
+			{ language: 'plaintext', label: 'Plain text' },
+			{ language: 'typescript', label: 'TypeScript' },
+			{ language: 'javascript', label: 'JavaScript' },
+			{ language: 'css', label: 'CSS' },
+			{ language: 'xml', label: 'HTML/XML' },
+			{ language: 'cs', label: 'C#' },
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
