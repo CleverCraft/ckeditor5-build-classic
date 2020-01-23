@@ -36,6 +36,8 @@ import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import SaveTemplatePlugin from './plugins/SaveTemplatePlugin';
+import OpenTemplatesPlugin from './plugins/OpenTemplatesPlugin';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -71,6 +73,8 @@ ClassicEditor.builtinPlugins = [
 	Subscript,
 	Superscript,
 	CodeBlock,
+	SaveTemplatePlugin,
+	OpenTemplatesPlugin,
 ];
 
 // Editor configuration.
@@ -89,6 +93,9 @@ ClassicEditor.defaultConfig = {
 			'codeBlock',
 			'bulletedList',
 			'numberedList',
+			'|',
+			'saveTemplate',
+			'openTemplates',
 			'|',
 			'indent',
 			'outdent',
@@ -128,6 +135,12 @@ ClassicEditor.defaultConfig = {
 			{ language: 'xml', label: 'HTML/XML' },
 			{ language: 'cs', label: 'C#' },
 		]
+	},
+	templateBlock: {
+		// eslint-disable-next-line no-undef
+		saveFn: () => console.log( 'Please provide saveFn in editor config' ),
+		// eslint-disable-next-line no-undef
+		openFn: () => console.log( 'Please provide openFn in editor config' ),
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
