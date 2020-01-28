@@ -38,6 +38,7 @@ import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import SaveTemplatePlugin from './plugins/SaveTemplatePlugin';
 import OpenTemplatesPlugin from './plugins/OpenTemplatesPlugin';
+import ShowSourceButtonPlugin from './plugins/ShowSourceButtonPlugin';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -75,6 +76,7 @@ ClassicEditor.builtinPlugins = [
 	CodeBlock,
 	SaveTemplatePlugin,
 	OpenTemplatesPlugin,
+	ShowSourceButtonPlugin
 ];
 
 // Editor configuration.
@@ -96,6 +98,8 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'saveTemplate',
 			'openTemplates',
+			'|',
+			'showSource',
 			'|',
 			'indent',
 			'outdent',
@@ -141,6 +145,10 @@ ClassicEditor.defaultConfig = {
 		saveFn: () => console.log( 'Please provide saveFn in editor config' ),
 		// eslint-disable-next-line no-undef
 		openFn: () => console.log( 'Please provide openFn in editor config' ),
+	},
+	sourceButtonActions: {
+		// eslint-disable-next-line no-undef
+		click: () => console.log( 'Please provide source button click handler' ),
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
