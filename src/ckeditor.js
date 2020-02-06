@@ -39,6 +39,8 @@ import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import SaveTemplatePlugin from './plugins/SaveTemplatePlugin';
 import OpenTemplatesPlugin from './plugins/OpenTemplatesPlugin';
 import ShowSourceButtonPlugin from './plugins/ShowSourceButtonPlugin';
+import Div from './plugins/Div';
+import WidgetViewPlugin from './plugins/WidgetViewPlugin';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -76,7 +78,9 @@ ClassicEditor.builtinPlugins = [
 	CodeBlock,
 	SaveTemplatePlugin,
 	OpenTemplatesPlugin,
-	ShowSourceButtonPlugin
+	ShowSourceButtonPlugin,
+	Div,
+	WidgetViewPlugin
 ];
 
 // Editor configuration.
@@ -100,6 +104,8 @@ ClassicEditor.defaultConfig = {
 			'openTemplates',
 			'|',
 			'showSource',
+			'|',
+			'widgetView',
 			'|',
 			'indent',
 			'outdent',
@@ -149,6 +155,10 @@ ClassicEditor.defaultConfig = {
 	sourceButtonActions: {
 		// eslint-disable-next-line no-undef
 		click: () => console.log( 'Please provide source button click handler' ),
+	},
+	widgetViewActions: {
+		// eslint-disable-next-line no-undef
+		click: () => console.log( 'Please provide widgetView button click handler' ),
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
